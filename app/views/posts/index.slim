@@ -1,0 +1,16 @@
+
+h4.text-center index
+hr
+
+.col-md-8.col-md-offset-2
+  table.table.table-hover
+    thead
+      tr
+        th 
+          |name
+        th.text-right = link_to 'new', new_post_path
+    tbody#post_index
+      - @posts.each do |post|
+        tr
+          td = link_to post.name, post_path(post)
+          td

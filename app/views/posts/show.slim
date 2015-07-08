@@ -1,0 +1,17 @@
+
+h4.text-center show
+hr
+
+.col-md-8.col-md-offset-2
+  table.table.table-hover
+    thead
+      tr
+        th 
+          |name
+        th.text-right 
+          = link_to 'index', posts_path
+          = link_to "new", new_post_path
+    tbody
+      tr
+        td = @post.name
+        td
